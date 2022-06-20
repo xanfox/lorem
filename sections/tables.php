@@ -4,6 +4,7 @@
     <mark>table, caption, th, tr, td, thead, tbody, tfooter, col, colgroup</mark>
 </h2>
 
+
 <details>
     <summary>table</summary>
     <p>define uma tabela, delimita onde começam e terminan os dados tabulares dentro de uma determinada sessão, ou bloco de código html</p>
@@ -47,6 +48,16 @@
     </p>
 </details>
 
+<details>
+    <summary>col - colgroup</summary>
+    <p>ajuda definir grupos de colunas que irão ter uma determinada formatação
+        no exemplo abaixo a primeira coluna span 1, teve a cor azul, as duas segunda
+        span 2, span 3 tiveram formatações diferentes, ou seja foram divididas em grupos de 2 e tres colunas
+        isso ajuda na formatação
+    </p>
+</details>
+
+
 <hr>
 
 
@@ -54,6 +65,10 @@
 include_once 'helpers.php';
 $basic_table    = show_source('subject/tables/basic-table.html', true);
 $caption_table  = show_source('subject/tables/caption-table.html', true);
+$thead_table    = show_source('subject/tables/thead-table.html', true);
+$col_table      = show_source('subject/tables/col-colgroup-table.html', true);
+$styled_table   = show_source('subject/tables/styled-table.html', true);
+
 
 
 ?>
@@ -72,5 +87,33 @@ $caption_table  = show_source('subject/tables/caption-table.html', true);
     <div class="column"><?= retForm($caption_table); ?></div>
     <div class="column card">
         <iframe src="subject/tables/caption-table.html" width="100%" frameborder="0"></iframe>
+    </div>
+</div>
+
+<hr>
+
+<div class="tag">Thead, tbody, hfoot - Agrupando o cabeçalho, corpo, rodapé</div>
+<div class="columns">
+    <div class="column"><?= retForm($thead_table); ?></div>
+    <div class="column card">
+        <iframe src="subject/tables/thead-table.html" width="100%" frameborder="0"></iframe>
+    </div>
+</div>
+
+
+<div class="tag">col, colgroup - Agrupamento de formatação de coluna</div>
+<div class="columns">
+    <div class="column"><?= retForm($col_table); ?></div>
+    <div class="column card">
+        <iframe src="subject/tables/col-colgroup-table.html" frameborder="0" width="100%"></iframe>
+    </div>
+</div>
+
+
+<div class="tag">Styled table with CSS, table, th, tr borders</div>
+<div class="columns">
+    <div class="column"><?= retForm($col_table); ?></div>
+    <div class="column card">
+        <iframe src="subject/tables/styled-table.html" frameborder="0" width="100%"></iframe>
     </div>
 </div>
